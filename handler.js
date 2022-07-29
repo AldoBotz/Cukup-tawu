@@ -33,8 +33,9 @@ module.exports = {
         global.namabot = conn.user.name
         global.packname = 'Powered By'
         global.author = 'Anjim'
-        //Thx To The.sad.boy01 Buat Sc no enc nya
+        //global.author = 'The.sad.boy01'
         global.wm2 = global.data.namabot + ' ' + global.data.owner
+        global.wm = 'Lui De Harem️'
         global.colong1 = 'Ciss 📸'
         global.colong2 = ''
         global.bg = await (await fetch(img)).buffer()
@@ -152,6 +153,7 @@ module.exports = {
                     if (!isNumber(user.lastrob)) user.lastrob = 0
                     if (!isNumber(user.lastngojek)) user.lastngojek = 0
                     if (!isNumber(user.lastgrab)) user.lastgrab = 0
+                    if (!isNumber(user.lastmerampok)) user.lastmerampok = 0                    
                     if (!isNumber(user.lastberkebon)) user.lastberkebon = 0
                     if (!isNumber(user.lastcodereg)) user.lastcodereg = 0
                     if (!isNumber(user.lastdagang)) user.lastdagang = 0
@@ -310,6 +312,7 @@ module.exports = {
                     lastdaang: 0,
                     lastngojek: 0,
                     lastgrab: 0,
+                    lastmerampok: 0,                    
                     lastngocok: 0,
                     lastturu: 0,
                     lastseen: 0,
@@ -499,7 +502,7 @@ module.exports = {
             global.prems = global.db.data.users[m.sender].premium ///JSON.parse(fs.readFileSync('./data/premium.json')) // Premium user has unlimited limit
             const isROwner = [global.conn.user.jid, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
             const isOwner = isROwner || m.fromMe
-            if (!isOwner && db.data.settings.self) return // Saat mode self diaktifkan hanya eee yang dapat menggunakannya
+            if (!isOwner && db.data.settings.self) return // Saat mode self diaktifkan hanya owner yang dapat menggunakannya
             const isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
             const isPrems = isROwner || db.data.users[m.sender].premium || false
             //let isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -749,14 +752,28 @@ module.exports = {
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
                                 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-                            await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'Lui-Sama', fkontak,{
+                            let wel = API('hardianto', '/api/welcome3', {
+                                profile: pp,
+                                name: await this.getName(user),
+                                bg: 'https://telegra.ph/file/c538a6f5b0649a7861174.png',
+                                namegb: await this.getName(id),
+                                member: groupMetadata.participants.length
+                            })
+                            let lea = API('hardianto', '/api/goodbye3', {
+                                profile: pp,
+                                name: await this.getName(user),
+                                bg: 'https://telegra.ph/file/c538a6f5b0649a7861174.png',
+                                namegb: await this.getName(id),
+                                member: groupMetadata.participants.length
+                            })
+                            await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fkontak,{
   contextInfo: { externalAdReply :{
     mediaUrl: linkig,
     mediaType: 2,
     description: deslink , 
     title: titlink,
     body: wm,
-    thumbnail: await(await fetch(pp)).buffer(),
+    thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
     sourceUrl: linkgc
      }}
   })
