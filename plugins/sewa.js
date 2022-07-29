@@ -15,8 +15,8 @@ Kamu Cina Baik Hati, Sini Saya Belikan Es Krim
   productListInfo: {
   productSections: [{
   title:'Klik untuk order es krim',
-  products:[{productId:'4938898346186376'}]}],
-  headerImage: { productId: '4938898346186376', 
+  products:[{productId:'7868294886577103'}]}],
+  headerImage: { productId: '7868294886577103', 
   jpegThumbnail: d },
   businessOwnerJid: `${owner[0]}@s.whatsapp.net`
   },
