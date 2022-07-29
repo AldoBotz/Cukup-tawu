@@ -5,7 +5,7 @@ global.tempatnye = JSON.parse(fs.readFileSync('./src/tempatnye.json'))
 global.thumbt = global.img
 global.fsx = 999999999999
 global.kontak = [
-['14157614750', 'AhmdLui 🥶🥶', 'AhmdLui', 'ayonimasangat@gmail.com', true]
+['14157614750', 'RexxinOfc 🥶🥶', 'RexxinOfc', 'rexxinofc@gmail.com', true]
 
 ]
 global.APIs = { // API Prefix
@@ -38,11 +38,11 @@ global.APIKeys = { // APIKey Here
 }
 
 global.wm = 'Bot-Md 𝑩𝒚 Lui-sama'
-global.linkgc = 'https://chat.whatsapp.com/CnQV9lNcHuIENb8SQ9CaYP'
-global.linkig = 'https://www.instagram.com/ahmdlui'
+global.linkgc = 'https://chat.whatsapp.com/BXRH5ApRnbaHm6ULbPuG4d'
+global.linkig = ''
 global.deslink = ''
-global.titlink = 'Folllow me on Instagram'
-global.bodlink = '@ahmdlui'
+global.titlink = 'Join My Groul OfficiL'
+global.bodlink = '@rexxinofc'
 
 global.wait = '_*𝐬𝐞𝐝𝐚𝐧𝐠 𝐝𝐢 𝐩𝐫𝐨𝐬𝐞𝐬 ...*_'
 global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ..*_'
@@ -52,11 +52,11 @@ global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ..*_'
 
 //========Url Template Buttons==========//
 global.dtu = '𝑭𝒐𝒍𝒍𝒐𝒘'
-global.urlnya = "https://www.instagram.com/ahmdlui"
+global.urlnya = "https://github.com/RexxinOfficial"
 
 //============= callButtons ============//
 global.dtc = '𝒄𝒂𝒍𝒍 𝒐𝒘𝒏𝒆𝒓'
-global.phn = '+62 895-3362-82144'
+global.phn = '+62 813-1754-9796'
 
 //========== Tampilan Bot =============//
 global.sa = '╭─'
